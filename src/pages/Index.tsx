@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Users, Github } from "lucide-react";
+import { startGithubLogin, logout } from '../api/auth';
+
 
 const Index = () => {
   return (
@@ -40,7 +42,7 @@ const Index = () => {
                     Enter Student Dashboard
                   </Button>
                 </Link>
-                <Button variant="outline" className="w-full" size="lg">
+                <Button onClick={() => startGithubLogin('student')} variant="outline" className="w-full" size="lg">
                   <Github className="mr-2" />
                   Continue with GitHub
                 </Button>
@@ -64,7 +66,7 @@ const Index = () => {
                     Enter Mentor Dashboard
                   </Button>
                 </Link>
-                <Button variant="outline" className="w-full" size="lg">
+                <Button onClick={() => startGithubLogin('mentor')} variant="outline" className="w-full" size="lg">
                   <Github className="mr-2" />
                   Continue with GitHub
                 </Button>
