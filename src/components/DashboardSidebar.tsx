@@ -11,11 +11,11 @@ const DashboardSidebar = ({ role }: SidebarProps) => {
   const basePath = role === "student" ? "/student-dashboard" : "/mentor-dashboard";
 
   const navItems = [
-    { icon: User, label: "Profile", path: basePath },
-    { icon: Compass, label: "Explore Posts", path: `${basePath}` },
-    { icon: Users, label: "Find My Mentor", path: `${basePath}` },
-    { icon: MessageSquare, label: "Chats", path: `${basePath}` },
-    { icon: Award, label: "Rewards", path: `${basePath}` },
+    { icon: User, label: "Profile", path: `${basePath}/profile` },
+    { icon: Compass, label: "Explore Posts", path: `${basePath}/explore` },
+    { icon: Users, label: "Find My Mentor", path: `${basePath}/find-mentor` },
+    { icon: MessageSquare, label: "Chats", path: `${basePath}/chats` },
+    { icon: Award, label: "Rewards", path: `${basePath}/rewards` },
   ];
 
   const isActive = (path: string) => location.pathname === path;

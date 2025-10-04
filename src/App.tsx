@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import StudentDashboard from "./pages/StudentDashboard";
 import MentorDashboard from "./pages/MentorDashboard";
+import Profile from "./pages/Profile";
+import ExplorePosts from "./pages/ExplorePosts";
+import FindMentor from "./pages/FindMentor";
+import Chats from "./pages/Chats";
+import Rewards from "./pages/Rewards";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,7 +24,17 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/student-dashboard/profile" element={<Profile />} />
+          <Route path="/student-dashboard/explore" element={<ExplorePosts />} />
+          <Route path="/student-dashboard/find-mentor" element={<FindMentor />} />
+          <Route path="/student-dashboard/chats" element={<Chats />} />
+          <Route path="/student-dashboard/rewards" element={<Rewards />} />
           <Route path="/mentor-dashboard" element={<MentorDashboard />} />
+          <Route path="/mentor-dashboard/profile" element={<Profile />} />
+          <Route path="/mentor-dashboard/explore" element={<ExplorePosts />} />
+          <Route path="/mentor-dashboard/find-mentor" element={<FindMentor />} />
+          <Route path="/mentor-dashboard/chats" element={<Chats />} />
+          <Route path="/mentor-dashboard/rewards" element={<Rewards />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
